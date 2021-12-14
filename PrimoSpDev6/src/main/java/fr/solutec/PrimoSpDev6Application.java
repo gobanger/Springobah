@@ -19,9 +19,9 @@ public class PrimoSpDev6Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Person p1  = new Person(null,"PATIEN","Mathis",57);
-		Person p2  = new Person(null,"Ta","Tou",4);
-		Person p3  = new Person(null,"CAGE","Nicolas",57);
+		Person p1  = new Person(null,"PATIEN","Mathis",57, "pm", "11");
+		Person p2  = new Person(null,"Ta","Tou",4, "tt", "12");
+		Person p3  = new Person(null,"CAGE","Nicolas",57, "gn", "13");
 		
 		personRepo.save(p1);
 		personRepo.save(p2);

@@ -16,5 +16,7 @@ public class Person {
 	private String nom;
 	private String prenom;
 	private int age;
+	private String login;
+	private String password;
 	
 }

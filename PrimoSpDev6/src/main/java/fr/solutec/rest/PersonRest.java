@@ -33,8 +33,15 @@ public class PersonRest {
 		// recupérer une personne en fontion de son id
 		
 		@GetMapping("user/{id}")
-		public Optional<Person> gerOnOptional(@PathVariable Long id){
+		public Optional<Person> getOnOptional(@PathVariable Long id){
 			return personRepo.findById(id);
+		}
+		
+		@PostMapping("login")
+		public Person connection(@RequestBody Person p) {
+			
+			return p;
+			
 		}
 
 }

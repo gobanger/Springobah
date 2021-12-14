@@ -3,13 +3,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import fr.solutec.entities.Memo;
 import fr.solutec.entities.Person;
+import fr.solutec.repository.MemoRepository;
 import fr.solutec.repository.PersonRepository;
 
 @SpringBootApplication
 public class PrimoSpDev6Application implements CommandLineRunner {
 	@Autowired
 	private PersonRepository personRepo;
+	@Autowired
+	private MemoRepository memoRepo;
 	
 
 	public static void main(String[] args) {
@@ -23,9 +28,12 @@ public class PrimoSpDev6Application implements CommandLineRunner {
 		Person p2  = new Person(null,"Ta","Tou",4, "tt", "12");
 		Person p3  = new Person(null,"CAGE","Nicolas",57, "gn", "13");
 		
+		Memo m1 = new Memo(null, "testoglob", p1);
+		
 		personRepo.save(p1);
 		personRepo.save(p2);
 		personRepo.save(p3);
+		memoRepo.save(m1);
 		
 	}
 

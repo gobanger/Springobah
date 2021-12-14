@@ -15,6 +15,5 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
 	public List<Person> getByNom(String nom);
 	
 	public Optional<Person> findByLoginAndPassword(String login, String password);
-	public List<Person> findByPassword(String password);
 
 }

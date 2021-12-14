@@ -1,5 +1,7 @@
 package fr.solutec.repository;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
@@ -12,7 +14,7 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
 	@Query(value="SELECT p FROM Person p WHERE p.nom=?1")
 	public List<Person> getByNom(String nom);
 	
-	public List<Person> findByLogin(String login);
+	public Optional<Person> findByLoginAndPassword(String login, String password);
 	public List<Person> findByPassword(String password);
 
 }

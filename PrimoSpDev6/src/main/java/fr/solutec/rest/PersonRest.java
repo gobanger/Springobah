@@ -1,5 +1,6 @@
 package fr.solutec.rest;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,10 +39,9 @@ public class PersonRest {
 		}
 		
 		@PostMapping("login")
-		public Person connection(@RequestBody Person p) {
+		public Optional<Person> connection(@RequestBody Person p) {
 			
-			return p;
-			
+			return personRepo.findByLoginAndPassword(p.getLogin(), p.getPassword());			
 		}
 
 }

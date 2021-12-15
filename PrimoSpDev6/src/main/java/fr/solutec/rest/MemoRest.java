@@ -1,6 +1,7 @@
 package fr.solutec.rest;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -36,6 +37,12 @@ public class MemoRest {
 	@GetMapping("memo/{idMemo}")
 	public void deleteMemo(@PathVariable Long idMemo) {
 		memoRepo.deleteById(idMemo);
+	}
+	
+	@GetMapping("memo/public")
+	public List<Memo> getPublicMemo(){
+		return memoRepo.findByStatusIsTrue();
+		
 	}
 
 }

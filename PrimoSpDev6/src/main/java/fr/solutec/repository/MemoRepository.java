@@ -14,8 +14,6 @@ public interface MemoRepository extends CrudRepository<Memo, Long>{
 	
 	public List<Memo> findByCreateur(Optional<Person> optional);
 	
-	//public void delete(Memo m);
+	public List<Memo> findByStatusIsTrue();
 	
-	@Query(value="SELECT m FROM Memo m WHERE m.id=?1")
-	public void deleteById(Optional<Memo> findById);
 }

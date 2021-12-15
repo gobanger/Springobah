@@ -30,12 +30,16 @@ public class PrimoSpDev6Application implements CommandLineRunner {
 		
 		Memo m1 = new Memo(null, "testoglob", true, "tt", p1);
 		Memo m2 = new Memo(null, "testoglobo", false, null, p2);
+		Memo m3 = new Memo(null, "Skibidipapoum", true, "tt", p3);
+		Memo m4 = new Memo(null, "Zbougang", true, "gn", p2);
 		
 		personRepo.save(p1);
 		personRepo.save(p2);
 		personRepo.save(p3);
 		memoRepo.save(m1);
 		memoRepo.save(m2);
+		memoRepo.save(m3);
+		memoRepo.save(m4);
 		
 	}
 

@@ -16,7 +16,7 @@ public class Memo {
 	@Id @GeneratedValue
 	private Long id;
 	private String contenu;
-	private Boolean status;
+	private boolean status;
 	@Column(nullable = true)
 	private String loginDest;
 	

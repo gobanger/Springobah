@@ -28,12 +28,14 @@ public class PrimoSpDev6Application implements CommandLineRunner {
 		Person p2  = new Person(null,"Ta","Tou",4, "tt", "12");
 		Person p3  = new Person(null,"CAGE","Nicolas",57, "gn", "13");
 		
-		Memo m1 = new Memo(null, "testoglob", p1);
+		Memo m1 = new Memo(null, "testoglob", true, "tt", p1);
+		Memo m2 = new Memo(null, "testoglobo", false, null, p2);
 		
 		personRepo.save(p1);
 		personRepo.save(p2);
 		personRepo.save(p3);
 		memoRepo.save(m1);
+		memoRepo.save(m2);
 		
 	}
 
